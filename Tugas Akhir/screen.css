@@ -1,0 +1,155 @@
+body{
+    margin: 0;
+    background-color: #DBB5B0;
+    background-image: url("Cloud\ Background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2{
+    font-size: 2em;
+    font-weight: bold;
+}
+.container{
+    height: 100vh;
+
+    display: grid;
+    gap: 20px;
+
+    grid-template-columns: 1fr 350px;
+    grid-template-rows: 50px 1fr 1fr 200px;
+}
+.top-bar{
+    grid-column: 1 / 3;
+    grid-row: 1 / 2 ;
+    background-color: #6F0000;
+}
+.kotak{
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    background-color: #6f0000af;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    padding: 10px;
+    border-radius: 20px;
+}
+.kotak-dalam{
+    position: absolute;
+    width: 310px;
+}
+.kotak-dalam p{
+    font-size: 20px;
+}
+.kotak-dalam img{
+    width: 100%;
+    border-radius: 10px;
+}
+input{
+    border-radius: 10px;
+    height: 30px;
+    width: 95%;
+    margin-top: 20px;
+    margin-left: 2px;
+    background-color: rgb(247, 244, 244);
+}
+#game{
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    border: 1px solid black;
+    background-color: whitesmoke;
+    width: 1400px;
+    height: 700px;
+    margin-left: 80px;
+    border-radius: 40px;
+}
+#character{
+    width: 60px;
+    height: 100px;
+    background-color: red;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+    position: relative;
+    top: 400px;
+    left: 20%;
+    border-radius: 30px;
+}
+.animate{
+    animation: jump 1000ms;
+}
+@keyframes jump{
+    0%{top: 380px;}
+    30%{top: 320px;}
+    70%{top: 3200px;}
+    100%{top: 380px;}
+}
+#block{
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    background-color: rgb(238, 255, 0);
+    border-radius: 20px 0 0 20px;
+    position: relative;
+    top: 370px;
+    left: 1380px;
+    animation: block 1s infinite;
+    
+}
+@keyframes block{
+    0%{left: 1300px;}
+    100%{left:-3px;}
+}
+.game{
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+    display: flex;
+    flex-direction: row;
+}
+.kotak-game{
+    width: 280px;
+    height: 180px;
+    background-color: white;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 20px;
+    border: dashed;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    opacity: 0;
+}
+.overlay:hover{
+    opacity: 1;
+    border-radius: 15px;
+}
+.title{
+    font-size: 2em;
+    font-weight: bold;
+}
+.title a{
+    text-decoration: none;
+    color: white;
+}
+.back{
+    margin-top: -1000px;
+    margin-left: 10px;
+}
+.back a{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+}
